@@ -42,15 +42,22 @@ class MainController: UIViewController {
     //--------------------------------------------------------
     private func showCachedData() {
         
-        cardNumberTF.text = CacheManager.shared.cardNumber
-        if CacheManager.shared.hasSavedData {
-            show(balance: CacheManager.shared.balance)
+        guard let cacheManager = ServiceLocator.shared.getService() as CacheManager? else {
+            return
+        }
+        
+        cardNumberTF.text = cacheManager.cardNumber
+        if cacheManager.hasSavedData {
+            show(balance: cacheManager.balance)
         }
     }
 
     private func saveToCacheCardNumber(_ cardNumber: String, andBalance balance: Int) {
-        CacheManager.shared.balance = balance
-        CacheManager.shared.cardNumber = cardNumber
+
+        var cacheManager = ServiceLocator.shared.getService() as CacheManager?
+        
+        cacheManager?.balance = balance
+        cacheManager?.cardNumber = cardNumber
     }
     
     //--------------------------------------------------------
@@ -70,7 +77,7 @@ class MainController: UIViewController {
     @IBAction func clearCache() {
         cardNumberTF.text = nil
         informationLabel.text = nil
-        CacheManager.shared.clear()
+        (ServiceLocator.shared.getService() as CacheManager?)?.clear()
     }
     
     //--------------------------------------------------------
@@ -81,7 +88,8 @@ class MainController: UIViewController {
         spinner.startAnimating()
         informationLabel.text = nil
         
-        ApiManager.shared.load(cardNumber: cardNumber) { [weak self] result in
+        let apiService = ServiceLocator.shared.getService() as APIService?
+        apiService?.load(cardNumber: cardNumber) { [weak self] result in
 
             guard let self = self else { return }
 

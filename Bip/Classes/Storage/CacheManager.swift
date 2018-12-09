@@ -10,7 +10,17 @@
 import Foundation
 
 //############################################################
-class CacheManager {
+protocol CacheManager {
+    
+    var hasSavedData: Bool { get }
+    
+    var cardNumber: String? { get set }
+    var balance: Int { get set }
+    func clear()
+}
+
+//############################################################
+class UserDefaultsCacheManager: CacheManager {
 
     //--------------------------------------------------------
     enum Key: String {
@@ -18,9 +28,6 @@ class CacheManager {
         case cardNumber = "CardNumber"
     }
     
-    //--------------------------------------------------------
-    static let shared = CacheManager()
- 
     //--------------------------------------------------------
     public var hasSavedData: Bool { return cardNumber != nil }
     
@@ -43,7 +50,7 @@ class CacheManager {
     }
     
     //--------------------------------------------------------
-    private init(){
+    init(){
         load()
     }
 

@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		5B20351E21BD836600B60010 /* TSInfo-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B20351C21BD836600B60010 /* TSInfo-Normal.ttf */; };
 		5B20351F21BD836600B60010 /* TSInfo-Gruesa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */; };
+		5B20352121BD944200B60010 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352021BD944200B60010 /* ServiceLocator.swift */; };
+		5B20352421BD9B7900B60010 /* StatusResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352321BD9B7900B60010 /* StatusResponseParser.swift */; };
 		5B94BB2F21BC482D006ADA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB2D21BC482D006ADA15 /* Main.storyboard */; };
 		5B94BB3121BC482E006ADA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB3021BC482E006ADA15 /* Assets.xcassets */; };
 		5B94BB3421BC482E006ADA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB3221BC482E006ADA15 /* LaunchScreen.storyboard */; };
 		5B94BB3F21BC482F006ADA15 /* BipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB3E21BC482F006ADA15 /* BipTests.swift */; };
 		5B94BB5521BC58EF006ADA15 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB5021BC58EE006ADA15 /* MainController.swift */; };
-		5B94BB5621BC58EF006ADA15 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB5221BC58EE006ADA15 /* ApiManager.swift */; };
+		5B94BB5621BC58EF006ADA15 /* WebAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB5221BC58EE006ADA15 /* WebAPIService.swift */; };
 		5B94BB5721BC58EF006ADA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB5421BC58EE006ADA15 /* AppDelegate.swift */; };
 		5B94BB5C21BC628E006ADA15 /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB5B21BC628E006ADA15 /* StatusResponse.swift */; };
 		5B94BB5E21BC62A6006ADA15 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB5D21BC62A6006ADA15 /* Result.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		5B20351C21BD836600B60010 /* TSInfo-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSInfo-Normal.ttf"; sourceTree = "<group>"; };
 		5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSInfo-Gruesa.ttf"; sourceTree = "<group>"; };
+		5B20352021BD944200B60010 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		5B20352321BD9B7900B60010 /* StatusResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponseParser.swift; sourceTree = "<group>"; };
 		5B94BB2621BC482D006ADA15 /* Bip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B94BB2E21BC482D006ADA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B94BB3021BC482E006ADA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +49,7 @@
 		5B94BB3E21BC482F006ADA15 /* BipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BipTests.swift; sourceTree = "<group>"; };
 		5B94BB4021BC482F006ADA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B94BB5021BC58EE006ADA15 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		5B94BB5221BC58EE006ADA15 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		5B94BB5221BC58EE006ADA15 /* WebAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIService.swift; sourceTree = "<group>"; };
 		5B94BB5421BC58EE006ADA15 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B94BB5B21BC628E006ADA15 /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		5B94BB5D21BC62A6006ADA15 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -79,6 +83,14 @@
 				5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5B20352221BD989900B60010 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B20352021BD944200B60010 /* ServiceLocator.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5B94BB1D21BC482D006ADA15 = {
@@ -122,6 +134,7 @@
 		5B94BB4E21BC58EE006ADA15 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B20352221BD989900B60010 /* Services */,
 				5B94BB5121BC58EE006ADA15 /* API */,
 				5B94BB5321BC58EE006ADA15 /* AppDelegate */,
 				5B94BB5A21BC6280006ADA15 /* Models */,
@@ -142,8 +155,9 @@
 		5B94BB5121BC58EE006ADA15 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				5B94BB5221BC58EE006ADA15 /* ApiManager.swift */,
+				5B94BB5221BC58EE006ADA15 /* WebAPIService.swift */,
 				5B94BB6421BC6C85006ADA15 /* Endpoint.swift */,
+				5B20352321BD9B7900B60010 /* StatusResponseParser.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -298,11 +312,13 @@
 				5B94BB5721BC58EF006ADA15 /* AppDelegate.swift in Sources */,
 				5B94BB5E21BC62A6006ADA15 /* Result.swift in Sources */,
 				5B94BB6521BC6C85006ADA15 /* Endpoint.swift in Sources */,
-				5B94BB5621BC58EF006ADA15 /* ApiManager.swift in Sources */,
+				5B94BB5621BC58EF006ADA15 /* WebAPIService.swift in Sources */,
 				5B94BB5C21BC628E006ADA15 /* StatusResponse.swift in Sources */,
 				5B94BB5521BC58EF006ADA15 /* MainController.swift in Sources */,
 				5B94BB6021BC62B3006ADA15 /* Status.swift in Sources */,
+				5B20352121BD944200B60010 /* ServiceLocator.swift in Sources */,
 				5B94BB6321BC6306006ADA15 /* CacheManager.swift in Sources */,
+				5B20352421BD9B7900B60010 /* StatusResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

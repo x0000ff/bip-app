@@ -10,16 +10,15 @@
 import UIKit
 
 //############################################################
-class ApiManager {
-    
+protocol APIService {
+    func load(cardNumber: String, completion: ((Result<StatusResponse>) -> Void)?)
+}
+
+//############################################################
+class WebAPIService: APIService {
+
     //--------------------------------------------------------
-    static let shared = ApiManager()
-    
-    //--------------------------------------------------------
-    private init(){}
-    
-    //--------------------------------------------------------
-    func load(cardNumber: String, completion: ((NetworkRequestResult<StatusResponse>) -> Void)?) {
+    func load(cardNumber: String, completion: ((Result<StatusResponse>) -> Void)?) {
         
         let endpoint = Endpoint.getBalance(cardNumber: cardNumber)
         let url = endpoint.url
@@ -33,22 +32,15 @@ class ApiManager {
                     return
                 }
                 
-                if let jsonData = responseData {
-                    
-                    let decoder = JSONDecoder()
-                    
-                    do {
-                        let status = try decoder.decode(StatusResponse.self, from: jsonData)
-                        completion?(.success(status))
-                    } catch {
-                        completion?(.failure(error))
-                    }
-                    
+                guard let jsonData = responseData else {
+                    let errorMessage = "Data was not retrieved from request"
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : errorMessage]) as Error
+                    completion?(.failure(error))
                     return
                 }
                 
-                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) as Error
-                completion?(.failure(error))
+                let result = StatusResponseParser().parse(jsonData: jsonData)
+                completion?(result)
             }
         }
         
