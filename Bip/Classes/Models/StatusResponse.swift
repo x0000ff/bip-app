@@ -10,9 +10,13 @@
 import Foundation
 
 //############################################################
-struct StatusResponse: Codable {
+struct StatusResponse {
     let error: String?
     let status: Status?
+}
+
+//############################################################
+extension StatusResponse: Codable {
 }
 
 //############################################################

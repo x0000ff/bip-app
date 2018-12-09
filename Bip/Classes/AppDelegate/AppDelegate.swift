@@ -18,10 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //--------------------------------------------------------
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-
-        ServiceLocator.shared.registerService(service: WebAPIService() as APIService)
-        ServiceLocator.shared.registerService(service: UserDefaultsCacheManager() as CacheManager)
+       
+        ServiceLocator.shared.apiService = LocalApiService()
 
         return true
     }

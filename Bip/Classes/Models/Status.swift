@@ -10,7 +10,7 @@
 import Foundation
 
 //############################################################
-struct Status: Codable {
+struct Status {
     let number: String
     let message: String
     let valid: Bool
@@ -18,4 +18,7 @@ struct Status: Codable {
     let date: String
 }
 
+//############################################################
+extension Status: Codable {
+}
 //############################################################

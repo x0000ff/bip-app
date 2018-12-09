@@ -11,6 +11,7 @@
 		5B20351F21BD836600B60010 /* TSInfo-Gruesa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */; };
 		5B20352121BD944200B60010 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352021BD944200B60010 /* ServiceLocator.swift */; };
 		5B20352421BD9B7900B60010 /* StatusResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352321BD9B7900B60010 /* StatusResponseParser.swift */; };
+		5B20352621BDA67900B60010 /* LocalApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352521BDA67900B60010 /* LocalApiService.swift */; };
 		5B94BB2F21BC482D006ADA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB2D21BC482D006ADA15 /* Main.storyboard */; };
 		5B94BB3121BC482E006ADA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB3021BC482E006ADA15 /* Assets.xcassets */; };
 		5B94BB3421BC482E006ADA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB3221BC482E006ADA15 /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 		5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSInfo-Gruesa.ttf"; sourceTree = "<group>"; };
 		5B20352021BD944200B60010 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		5B20352321BD9B7900B60010 /* StatusResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponseParser.swift; sourceTree = "<group>"; };
+		5B20352521BDA67900B60010 /* LocalApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalApiService.swift; sourceTree = "<group>"; };
 		5B94BB2621BC482D006ADA15 /* Bip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B94BB2E21BC482D006ADA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B94BB3021BC482E006ADA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				5B94BB5221BC58EE006ADA15 /* WebAPIService.swift */,
+				5B20352521BDA67900B60010 /* LocalApiService.swift */,
 				5B94BB6421BC6C85006ADA15 /* Endpoint.swift */,
 				5B20352321BD9B7900B60010 /* StatusResponseParser.swift */,
 			);
@@ -318,6 +321,7 @@
 				5B94BB6021BC62B3006ADA15 /* Status.swift in Sources */,
 				5B20352121BD944200B60010 /* ServiceLocator.swift in Sources */,
 				5B94BB6321BC6306006ADA15 /* CacheManager.swift in Sources */,
+				5B20352621BDA67900B60010 /* LocalApiService.swift in Sources */,
 				5B20352421BD9B7900B60010 /* StatusResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

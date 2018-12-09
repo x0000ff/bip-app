@@ -9,24 +9,14 @@
 import Foundation
 
 protocol ServiceLocating {
-    func getService<T>() -> T?
+    var apiService: APIService { get }
+    var cacheManager: CacheManager { get }
 }
 
 final class ServiceLocator: ServiceLocating {
-    private lazy var services: Dictionary<String, Any> = [:]
+
+    var apiService: APIService = WebAPIService()
+    var cacheManager: CacheManager = UserDefaultsCacheManager()
     
-    private func typeName(some: Any) -> String {
-        return (some is Any.Type) ? "\(some)" : "\(type(of: some))"
-    }
-    
-    func registerService<T>(service: T) {
-        let key = typeName(some: T.self)
-        services[key] = service
-    }
-    
-    func getService<T>() -> T? {
-        let key = typeName(some: T.self)
-        return services[key] as? T
-    }
     public static let shared = ServiceLocator()
 }
