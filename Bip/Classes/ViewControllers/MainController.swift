@@ -13,12 +13,29 @@ import UIKit
 class MainController: UIViewController {
 
     //--------------------------------------------------------
+    // MARK: - Public vars
+    //--------------------------------------------------------
+    var dependencyContainer: DependencyContainer
+
+    //--------------------------------------------------------
     // MARK: - Outlets
     //--------------------------------------------------------
     @IBOutlet weak var cardNumberTF: UITextField!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
+    //--------------------------------------------------------
+    // MARK: - Override
+    //--------------------------------------------------------
+    init(dependencyContainer: DependencyContainer) {
+        self.dependencyContainer = dependencyContainer
+        super.init(nibName: "MainController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
+    
     //--------------------------------------------------------
     // MARK: - Override
     //--------------------------------------------------------
@@ -42,7 +59,7 @@ class MainController: UIViewController {
     //--------------------------------------------------------
     private func showCachedData() {
         
-        let cacheManager = ServiceLocator.shared.cacheManager
+        let cacheManager = dependencyContainer.cacheManager
         
         cardNumberTF.text = cacheManager.cardNumber
         if cacheManager.hasSavedData {
@@ -52,7 +69,7 @@ class MainController: UIViewController {
 
     private func saveToCacheCardNumber(_ cardNumber: String, andBalance balance: Int) {
 
-        var cacheManager = ServiceLocator.shared.cacheManager
+        var cacheManager = dependencyContainer.cacheManager
         
         cacheManager.balance = balance
         cacheManager.cardNumber = cardNumber
@@ -75,7 +92,7 @@ class MainController: UIViewController {
     @IBAction func clearCache() {
         cardNumberTF.text = nil
         informationLabel.text = nil
-        ServiceLocator.shared.cacheManager.clear()
+        dependencyContainer.cacheManager.clear()
     }
     
     //--------------------------------------------------------
@@ -86,7 +103,7 @@ class MainController: UIViewController {
         spinner.startAnimating()
         informationLabel.text = nil
         
-        let apiService = ServiceLocator.shared.apiService
+        let apiService = dependencyContainer.apiService
         apiService.load(cardNumber: cardNumber) { [weak self] result in
 
             guard let self = self else { return }

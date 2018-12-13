@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		5B20351E21BD836600B60010 /* TSInfo-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B20351C21BD836600B60010 /* TSInfo-Normal.ttf */; };
 		5B20351F21BD836600B60010 /* TSInfo-Gruesa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */; };
-		5B20352121BD944200B60010 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352021BD944200B60010 /* ServiceLocator.swift */; };
 		5B20352421BD9B7900B60010 /* StatusResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352321BD9B7900B60010 /* StatusResponseParser.swift */; };
 		5B20352621BDA67900B60010 /* LocalApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20352521BDA67900B60010 /* LocalApiService.swift */; };
-		5B94BB2F21BC482D006ADA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB2D21BC482D006ADA15 /* Main.storyboard */; };
 		5B94BB3121BC482E006ADA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB3021BC482E006ADA15 /* Assets.xcassets */; };
 		5B94BB3421BC482E006ADA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94BB3221BC482E006ADA15 /* LaunchScreen.storyboard */; };
 		5B94BB3F21BC482F006ADA15 /* BipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB3E21BC482F006ADA15 /* BipTests.swift */; };
@@ -24,6 +22,8 @@
 		5B94BB6021BC62B3006ADA15 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB5F21BC62B3006ADA15 /* Status.swift */; };
 		5B94BB6321BC6306006ADA15 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB6221BC6306006ADA15 /* CacheManager.swift */; };
 		5B94BB6521BC6C85006ADA15 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94BB6421BC6C85006ADA15 /* Endpoint.swift */; };
+		5BF31F2221C2CED100D3CB0E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31F2121C2CED100D3CB0E /* DependencyContainer.swift */; };
+		5BF31F2421C2D13900D3CB0E /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BF31F2321C2D13900D3CB0E /* MainController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +39,9 @@
 /* Begin PBXFileReference section */
 		5B20351C21BD836600B60010 /* TSInfo-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSInfo-Normal.ttf"; sourceTree = "<group>"; };
 		5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSInfo-Gruesa.ttf"; sourceTree = "<group>"; };
-		5B20352021BD944200B60010 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		5B20352321BD9B7900B60010 /* StatusResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponseParser.swift; sourceTree = "<group>"; };
 		5B20352521BDA67900B60010 /* LocalApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalApiService.swift; sourceTree = "<group>"; };
 		5B94BB2621BC482D006ADA15 /* Bip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B94BB2E21BC482D006ADA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B94BB3021BC482E006ADA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B94BB3321BC482E006ADA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B94BB3521BC482F006ADA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +56,8 @@
 		5B94BB5F21BC62B3006ADA15 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		5B94BB6221BC6306006ADA15 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		5B94BB6421BC6C85006ADA15 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		5BF31F2121C2CED100D3CB0E /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		5BF31F2321C2D13900D3CB0E /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,14 +85,6 @@
 				5B20351D21BD836600B60010 /* TSInfo-Gruesa.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		5B20352221BD989900B60010 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				5B20352021BD944200B60010 /* ServiceLocator.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		5B94BB1D21BC482D006ADA15 = {
@@ -136,7 +128,7 @@
 		5B94BB4E21BC58EE006ADA15 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5B20352221BD989900B60010 /* Services */,
+				5BF31F2021C2CEB700D3CB0E /* App */,
 				5B94BB5121BC58EE006ADA15 /* API */,
 				5B94BB5321BC58EE006ADA15 /* AppDelegate */,
 				5B94BB5A21BC6280006ADA15 /* Models */,
@@ -150,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5B94BB5021BC58EE006ADA15 /* MainController.swift */,
+				5BF31F2321C2D13900D3CB0E /* MainController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -186,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				5B94BB3221BC482E006ADA15 /* LaunchScreen.storyboard */,
-				5B94BB2D21BC482D006ADA15 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -207,6 +199,14 @@
 				5B94BB6221BC6306006ADA15 /* CacheManager.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		5BF31F2021C2CEB700D3CB0E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5BF31F2121C2CED100D3CB0E /* DependencyContainer.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +292,8 @@
 			files = (
 				5B94BB3421BC482E006ADA15 /* LaunchScreen.storyboard in Resources */,
 				5B94BB3121BC482E006ADA15 /* Assets.xcassets in Resources */,
+				5BF31F2421C2D13900D3CB0E /* MainController.xib in Resources */,
 				5B20351E21BD836600B60010 /* TSInfo-Normal.ttf in Resources */,
-				5B94BB2F21BC482D006ADA15 /* Main.storyboard in Resources */,
 				5B20351F21BD836600B60010 /* TSInfo-Gruesa.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,8 +319,8 @@
 				5B94BB5C21BC628E006ADA15 /* StatusResponse.swift in Sources */,
 				5B94BB5521BC58EF006ADA15 /* MainController.swift in Sources */,
 				5B94BB6021BC62B3006ADA15 /* Status.swift in Sources */,
-				5B20352121BD944200B60010 /* ServiceLocator.swift in Sources */,
 				5B94BB6321BC6306006ADA15 /* CacheManager.swift in Sources */,
+				5BF31F2221C2CED100D3CB0E /* DependencyContainer.swift in Sources */,
 				5B20352621BDA67900B60010 /* LocalApiService.swift in Sources */,
 				5B20352421BD9B7900B60010 /* StatusResponseParser.swift in Sources */,
 			);
@@ -345,14 +345,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5B94BB2D21BC482D006ADA15 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B94BB2E21BC482D006ADA15 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B94BB3221BC482E006ADA15 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

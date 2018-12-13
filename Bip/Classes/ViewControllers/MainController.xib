@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TSInfo-Gruesa.ttf">
+            <string>BEDHMK+TSInfo-Gruesa</string>
+        </array>
+        <array key="TSInfo-Normal.ttf">
+            <string>BEDMMA+TSInfo</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainController" customModule="Bip" customModuleProvider="target">
+            <connections>
+                <outlet property="cardNumberTF" destination="zwk-rx-Hvc" id="Gle-jL-A4R"/>
+                <outlet property="informationLabel" destination="uMd-8V-DMG" id="EEp-SB-u1V"/>
+                <outlet property="spinner" destination="wD6-aO-k3E" id="gei-YR-ZlW"/>
+                <outlet property="view" destination="s5E-rK-U83" id="OrI-rV-QUB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="s5E-rK-U83">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890" borderStyle="roundedRect" placeholder="Type card number here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwk-rx-Hvc" userLabel="Card Number">
+                    <rect key="frame" x="94" y="142" width="187.5" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="BEDMMA+TSInfo" family="BEDMMA+TSInfo" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="go" smartDashesType="no" smartQuotesType="no"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bip!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-2b-80l">
+                    <rect key="frame" x="32" y="52" width="311" height="58"/>
+                    <fontDescription key="fontDescription" name="BEDHMK+TSInfo-Gruesa" family="BEDHMK+TSInfo-Gruesa" pointSize="60"/>
+                    <color key="textColor" red="0.97647058819999999" green="0.72549019609999998" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance: $100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-8V-DMG">
+                    <rect key="frame" x="32" y="219" width="311" height="28.5"/>
+                    <fontDescription key="fontDescription" name="BEDMMA+TSInfo" family="BEDMMA+TSInfo" pointSize="30"/>
+                    <color key="textColor" red="0.97647058819999999" green="0.72549019609999998" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-MC-75u">
+                    <rect key="frame" x="170" y="180" width="35" height="31"/>
+                    <fontDescription key="fontDescription" name="BEDMMA+TSInfo" family="BEDMMA+TSInfo" pointSize="20"/>
+                    <state key="normal" title="Load">
+                        <color key="titleColor" red="0.97647058819999999" green="0.72549019609999998" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loadTapped" destination="-1" eventType="touchUpInside" id="iEc-xA-whs"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wD6-aO-k3E">
+                    <rect key="frame" x="169" y="219" width="37" height="37"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJI-pP-bdY">
+                    <rect key="frame" x="289.5" y="141.5" width="38" height="31"/>
+                    <fontDescription key="fontDescription" name="BEDMMA+TSInfo" family="BEDMMA+TSInfo" pointSize="20"/>
+                    <state key="normal" title="Clear">
+                        <color key="titleColor" red="0.97647058819999999" green="0.72549019609999998" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clearCache" destination="-1" eventType="touchUpInside" id="dPv-nx-Iff"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.12941176469999999" green="0.55294117649999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yoL-Gw-lWN" firstAttribute="trailing" secondItem="gMP-2b-80l" secondAttribute="trailing" constant="32" id="Be0-Qr-7LK"/>
+                <constraint firstItem="uJI-pP-bdY" firstAttribute="centerY" secondItem="zwk-rx-Hvc" secondAttribute="centerY" id="C15-ig-abd"/>
+                <constraint firstItem="zwk-rx-Hvc" firstAttribute="top" secondItem="gMP-2b-80l" secondAttribute="bottom" constant="32" id="COu-kh-SMC"/>
+                <constraint firstItem="zwk-rx-Hvc" firstAttribute="width" secondItem="s5E-rK-U83" secondAttribute="width" multiplier="0.5" id="DfI-l8-asK"/>
+                <constraint firstItem="yoL-Gw-lWN" firstAttribute="trailing" secondItem="uJI-pP-bdY" secondAttribute="trailing" constant="47.5" id="Dk3-RU-Mh2"/>
+                <constraint firstItem="wD6-aO-k3E" firstAttribute="top" secondItem="zyi-MC-75u" secondAttribute="bottom" constant="8" id="IKR-jS-XNu"/>
+                <constraint firstItem="uMd-8V-DMG" firstAttribute="top" secondItem="zyi-MC-75u" secondAttribute="bottom" constant="8" id="Ije-S9-GNx"/>
+                <constraint firstItem="gMP-2b-80l" firstAttribute="leading" secondItem="yoL-Gw-lWN" secondAttribute="leading" constant="32" id="L1L-gx-z9c"/>
+                <constraint firstItem="gMP-2b-80l" firstAttribute="top" secondItem="yoL-Gw-lWN" secondAttribute="top" constant="32" id="NQS-Y9-Uyb"/>
+                <constraint firstItem="yoL-Gw-lWN" firstAttribute="trailing" secondItem="uMd-8V-DMG" secondAttribute="trailing" constant="32" id="PU3-Xm-Xb3"/>
+                <constraint firstItem="uJI-pP-bdY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zwk-rx-Hvc" secondAttribute="trailing" constant="8" symbolic="YES" id="R6K-je-7SE"/>
+                <constraint firstItem="zyi-MC-75u" firstAttribute="top" secondItem="zwk-rx-Hvc" secondAttribute="bottom" constant="8" id="aXs-Tf-W5I"/>
+                <constraint firstItem="zwk-rx-Hvc" firstAttribute="centerX" secondItem="yoL-Gw-lWN" secondAttribute="centerX" id="ddk-GL-IGH"/>
+                <constraint firstItem="zyi-MC-75u" firstAttribute="centerX" secondItem="yoL-Gw-lWN" secondAttribute="centerX" id="sVy-3k-izh"/>
+                <constraint firstItem="uMd-8V-DMG" firstAttribute="leading" secondItem="yoL-Gw-lWN" secondAttribute="leading" constant="32" id="u9U-5E-Rla"/>
+                <constraint firstItem="wD6-aO-k3E" firstAttribute="centerX" secondItem="yoL-Gw-lWN" secondAttribute="centerX" id="xxz-VX-3TS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="yoL-Gw-lWN"/>
+        </view>
+    </objects>
+</document>
